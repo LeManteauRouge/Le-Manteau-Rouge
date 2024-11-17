@@ -192,10 +192,15 @@ body {
 
 /* styles.css */
 .video-container {
-  width: 300px; /* largeur personnalisée */
-  height: 200px; /* hauteur personnalisée */
+  /* width: 300px; 
+  height: 200px; 
   overflow: hidden;
   position: relative;
+  margin-left: 5px; */
+  width: 100%;
+  max-width: 100%;  /* Pour éviter qu'elle soit plus grande que la largeur du conteneur */
+  margin: 0 auto;   /* Centrer horizontalement */
+  padding-top: 15px; /* Ajout d'un peu d'espace autour de la vidéo */
 }
 
 .video-container iframe {
