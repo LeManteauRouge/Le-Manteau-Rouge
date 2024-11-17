@@ -1,58 +1,42 @@
-// Exemple d'ajout au panier (fonctionnalité simulée)
-document.querySelectorAll('#ajouter-panier').forEach(button => {
-    button.addEventListener('click', function() {
-      alert('Produit ajouté au panier');
-    });
-  });
-
-  // Contenus en français et en anglais
-const translations = {
-  fr: {
-    titrePrincipal: "Le Manteau Rouge",
-    accroche: "Chez nous, on adore quand le <span>SunShine</span>",
-    produit1: "Manteau d'hiver",
-    produit1Description: "Un manteau chaud pour les froides journées d'hiver.",
-    produit2: "Manteau de pluie",
-    produit2Description: "Un manteau imperméable pour affronter la pluie avec style.",
-    panierButton: "Ajouter au panier",
-    footer: "&copy; 2024 Le Manteau Rouge - Tous droits réservés"
-  },
-  en: {
-    titrePrincipal: "The Red Coat",
-    accroche: "We love when the <span>SunShine</span>",
-    produit1: "Winter Coat",
-    produit1Description: "A warm coat for the cold winter days.",
-    produit2: "Rain Coat",
-    produit2Description: "A waterproof coat to face the rain in style.",
-    panierButton: "Add to Cart",
-    footer: "&copy; 2024 The Red Coat - All rights reserved"
-  }
-};
-
-// Fonction pour changer la langue
 function changeLanguage() {
-  const language = document.getElementById("language-select").value;
-  
-  // Appliquer les traductions
-  document.querySelector(".titre-principal").innerHTML = translations[language].titrePrincipal;
-  document.querySelector(".accroche").innerHTML = translations[language].accroche;
-  
-  document.querySelectorAll(".produit-titre")[0].innerHTML = translations[language].produit1;
-  document.querySelectorAll(".produit-description")[0].innerHTML = translations[language].produit1Description;
-  
-  document.querySelectorAll(".produit-titre")[1].innerHTML = translations[language].produit2;
-  document.querySelectorAll(".produit-description")[1].innerHTML = translations[language].produit2Description;
-  
-  document.querySelectorAll(".ajouter-panier").forEach(button => {
-    button.innerHTML = translations[language].panierButton;
-  });
+  const language = document.getElementById('language-select').value;
 
-  document.querySelector(".footer-text").innerHTML = translations[language].footer;
+  if (language === 'fr') {
+    // Changer le texte en français
+    document.getElementById('brand-name').innerText = "Le Manteau Rouge";
+    document.getElementById('home-link').innerText = "Accueil";
+    document.getElementById('catalogue-link').innerText = "Catalogue";
+    document.getElementById('cart-link').innerText = "Panier";
+    document.getElementById('language-label').innerText = "Choisir la langue: ";
+    document.getElementById('main-title').innerText = "Le Manteau Rouge";
+    document.getElementById('slogan').innerText = "Le style élégant, pour toutes les occasions.";
+    document.getElementById('product1-title').innerText = "Manteau d'hiver";
+    document.getElementById('product1-description').innerText = "Un manteau chaud pour les froides journées d'hiver.";
+    document.getElementById('product2-title').innerText = "Manteau de pluie";
+    document.getElementById('product2-description').innerText = "Un manteau imperméable pour affronter la pluie avec style.";
+    document.getElementById('product3-title').innerText = "Veste en laine";
+    document.getElementById('product3-description').innerText = "Veste en laine pour un look casual et élégant.";
+    document.getElementById('footer-text').innerText = "&copy; 2024 Le Manteau Rouge - Tous droits réservés";
+  } else if (language === 'en') {
+    // Changer le texte en anglais
+    document.getElementById('brand-name').innerText = "The Red Coat";
+    document.getElementById('home-link').innerText = "Home";
+    document.getElementById('catalogue-link').innerText = "Catalogue";
+    document.getElementById('cart-link').innerText = "Cart";
+    document.getElementById('language-label').innerText = "Choose language: ";
+    document.getElementById('main-title').innerText = "The Red Coat";
+    document.getElementById('slogan').innerText = "Elegant style for every occasion.";
+    document.getElementById('product1-title').innerText = "Winter Coat";
+    document.getElementById('product1-description').innerText = "A warm coat for cold winter days.";
+    document.getElementById('product2-title').innerText = "Rain Coat";
+    document.getElementById('product2-description').innerText = "A waterproof coat to face the rain in style.";
+    document.getElementById('product3-title').innerText = "Wool Jacket";
+    document.getElementById('product3-description').innerText = "Wool jacket for a casual and elegant look.";
+    document.getElementById('footer-text').innerText = "&copy; 2024 The Red Coat - All rights reserved";
+  }
 }
 
-// Initialisation pour la langue par défaut (français)
-document.addEventListener("DOMContentLoaded", function () {
+// Appliquer la langue par défaut (français) au chargement de la page
+document.addEventListener('DOMContentLoaded', function () {
   changeLanguage();
 });
-
-  

@@ -5,53 +5,97 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Le Manteau Rouge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+  <!-- Navbar -->
   <header>
-    <nav>
-      <ul>
-        <li><a href="#" class="accueil">Accueil</a></li>
-        <li><a href="#" class="catalogue">Catalogue</a></li>
-        <li><a href="#" class="panier">Panier</a></li>
-      </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#" id="brand-name">Le Manteau Rouge</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" id="home-link">Accueil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="catalogue-link">Catalogue</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="cart-link">Panier</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <!-- Sélecteur de langue -->
-    <div>
-      <label for="language-select">Choisir la langue : </label>
+
+<!-- Langue -->
+    <div class="language-selector">
+      <label for="language-select" id="language-label">Choisir la langue: </label>
       <select id="language-select" onchange="changeLanguage()">
         <option value="fr">Français</option>
         <option value="en">English</option>
       </select>
     </div>
+
   </header>
 
-  <main>
-    <h1 class="titre-principal">Le Manteau Rouge</h1>
-    <p class="accroche">Chez nous, on adore quand le <span>SunShine</span></p>
-    <section id="produits">
-      <!-- Liste des produits -->
-      <div class="produit">
-        <h2 class="produit-titre">Manteau d'hiver</h2>
-        <img src="https://via.placeholder.com/150" alt="Manteau d'hiver">
-        <p class="produit-description">Un manteau chaud pour les froides journées d'hiver.</p>
-        <button class="ajouter-panier">Ajouter au panier</button>
+  <!-- Main Content -->
+  <main class="container mt-4">
+    <h1 id="main-title" class="text-center">Le Manteau Rouge</h1>
+    <p id="slogan" class="text-center">Le style élégant, pour toutes les occasions.</p>
+
+    <!-- Image sous le slogan -->
+    <div class="text-center mt-4">
+      <img src="image/gros_horloge.jpg" alt="Image promotionnelle" class="img-fluid">
+    </div>
+
+    <!-- Annonce Vente Privée -->
+    <div class="alert alert-info text-center mt-4" role="alert">
+      <h4 class="alert-heading">Vente Privée !</h4>
+      <p>Ne manquez pas notre vente privée exclusive le <strong>lundi 16 décembre à 19h</strong>.</p>
+      <p>Réservez votre place pour découvrir nos produits en avant-première.</p>
+    </div>
+
+    <section id="produits" class="row justify-content-center">
+      <!-- Produit 1 -->
+      <div class="col-md-4 produit">
+        <h2 id="product1-title">Manteau d'hiver</h2>
+        <img src="https://via.placeholder.com/300" alt="Manteau d'hiver" class="img-fluid">
+        <p id="product1-description">Un manteau chaud pour les froides journées d'hiver.</p>
+        <button class="btn btn-primary">Ajouter au panier</button>
       </div>
-      <div class="produit">
-        <h2 class="produit-titre">Manteau de pluie</h2>
-        <img src="https://via.placeholder.com/150" alt="Manteau de pluie">
-        <p class="produit-description">Un manteau imperméable pour affronter la pluie avec style.</p>
-        <button class="ajouter-panier">Ajouter au panier</button>
+      <!-- Produit 2 -->
+      <div class="col-md-4 produit">
+        <h2 id="product2-title">Manteau de pluie</h2>
+        <img src="https://via.placeholder.com/300" alt="Manteau de pluie" class="img-fluid">
+        <p id="product2-description">Un manteau imperméable pour affronter la pluie avec style.</p>
+        <button class="btn btn-primary">Ajouter au panier</button>
+      </div>
+      <!-- Produit 3 -->
+      <div class="col-md-4 produit">
+        <h2 id="product3-title">Veste en laine</h2>
+        <img src="https://via.placeholder.com/300" alt="Veste en laine" class="img-fluid">
+        <p id="product3-description">Veste en laine pour un look casual et élégant.</p>
+        <button class="btn btn-primary">Ajouter au panier</button>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p class="footer-text">&copy; 2024 Le Manteau Rouge - Tous droits réservés</p>
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p id="footer-text">&copy; 2024 Le Manteau Rouge - Tous droits réservés</p>
   </footer>
 
   <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

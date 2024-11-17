@@ -10,19 +10,19 @@ header {
   background-color: #333;
   color: white;
   padding: 10px;
-  text-align: center; /* Centre le contenu de l'en-tête */
+  text-align: center;
 }
 
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Utilisation de flexbox pour disposer les éléments en ligne */
-  justify-content: center; /* Centre horizontalement les éléments de la liste */
+  display: flex; /* Utilisation de flexbox pour aligner les éléments horizontalement */
+  justify-content: center; /* Centre les éléments horizontalement */
 }
 
 nav ul li {
-  margin: 0 15px; /* Espacement entre les onglets */
+  margin: 0 15px; /* Espacement entre les éléments du menu */
 }
 
 a {
@@ -34,8 +34,18 @@ a {
 }
 
 a:hover {
-  background-color: #555; /* Change la couleur de fond au survol */
-  border-radius: 4px; /* Ajoute des bords arrondis au survol */
+  background-color: #555; /* Changement de couleur au survol */
+  border-radius: 4px; /* Arrondir les coins au survol */
+}
+
+/* Sélecteur de langue */
+header div {
+  margin-top: 10px;
+}
+
+#language-select {
+  padding: 5px;
+  font-size: 16px;
 }
 
 /* Styles pour le reste de la page */
