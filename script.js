@@ -16,7 +16,7 @@ function changeLanguage() {
     document.getElementById('product2-description').innerText = "Un manteau imperméable pour affronter la pluie avec style.";
     document.getElementById('product3-title').innerText = "Veste en laine";
     document.getElementById('product3-description').innerText = "Veste en laine pour un look casual et élégant.";
-    document.getElementById('footer-text').innerText = "&copy; 2024 Le Manteau Rouge - Tous droits réservés";
+    document.getElementById('footer-text').innerHTML = "&copy; 2024 Le Manteau Rouge - Tous droits réservés"; // Utilisation de innerHTML pour afficher le copyright
   } else if (language === 'en') {
     // Changer le texte en anglais
     document.getElementById('brand-name').innerText = "The Red Coat";
@@ -32,7 +32,7 @@ function changeLanguage() {
     document.getElementById('product2-description').innerText = "A waterproof coat to face the rain in style.";
     document.getElementById('product3-title').innerText = "Wool Jacket";
     document.getElementById('product3-description').innerText = "Wool jacket for a casual and elegant look.";
-    document.getElementById('footer-text').innerText = "&copy; 2024 The Red Coat - All rights reserved";
+    document.getElementById('footer-text').innerHTML = "&copy; 2024 The Red Coat - All rights reserved"; // Utilisation de innerHTML pour afficher le copyright
   }
 }
 
