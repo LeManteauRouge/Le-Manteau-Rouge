@@ -15,6 +15,24 @@
 
 <body>
 
+  <!-- Popup d'événement -->
+  <div id="event-popup" style="display: none; align-items: center; justify-content: center; 
+                             position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                             background: rgba(0, 0, 0, 0.8); color: white; z-index: 1000;">
+    <div style="background: white; padding: 20px; border-radius: 10px; color: black; 
+                max-width: 400px; text-align: center; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+      <h2 style="margin: 0; color: #e91e63;">✨ VENTES PRIVÉES EXCLUSIVES ✨</h2>
+      <p><strong>📅 Lundi 16 décembre</strong></p>
+      <p><strong>🕖 19H précises</strong></p>
+      <p><strong>📍 Place de la Grosse Horloge</strong></p>
+      <button id="close-popup" 
+              style="margin-top: 10px; background: #e91e63; color: white; 
+                     padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        OK
+      </button>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -121,6 +139,47 @@
   <script src="scripts.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script>
+    // Fonction pour fermer la popup
+// Fonction pour fermer la popup avec une animation douce
+    function closePopup() {
+      const popup = document.getElementById('event-popup');
+      if (popup) {
+        // Appliquer le fondu
+        popup.style.opacity = '0';
+
+        // Attendre que l'animation soit terminée avant de cacher le popup
+        setTimeout(function() {
+          popup.style.display = 'none';
+        }, 500);  // Temps de transition, ici 500ms
+      }
+    }
+
+
+    // Afficher la popup à l'ouverture de la page si elle n'a pas été vue
+    window.addEventListener('DOMContentLoaded', function() {
+      const popup = document.getElementById('event-popup');
+
+      if (!popup) return; // Sécurité si l'élément n'existe pas
+
+      if (!localStorage.getItem('popupSeen')) {
+        popup.style.display = 'flex';
+
+        // Enregistrer que la popup a été vue
+        localStorage.setItem('popupSeen', 'true');
+
+        // Fermer automatiquement après 5 secondes
+        setTimeout(closePopup, 5000);
+      }
+
+      // Ajouter un événement de clic sur le bouton "OK"
+      const closeButton = document.getElementById('close-popup');
+      if (closeButton) {
+        closeButton.addEventListener('click', closePopup);
+      }
+    });
+  </script> 
+  
 </body>
 
 </html>

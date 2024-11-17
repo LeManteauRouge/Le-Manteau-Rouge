@@ -149,3 +149,10 @@ body {
   color: #c3ac90;  /* La même couleur que au survol ou une autre couleur que tu préfères */
   outline: none; /* Retirer le contour du focus si nécessaire */
 }
+
+#event-popup {
+  display: none;
+  opacity: 1;  /* Définir l'opacité initiale */
+  transition: opacity 0.5s ease-out;  /* Animation de fondu sur 0.5 seconde */
+}
+
