@@ -1,47 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Le Manteau Rouge</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <header>
     <nav>
       <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Catalogue</a></li>
-        <li><a href="#">Panier</a></li>
+        <li><a href="#" class="accueil">Accueil</a></li>
+        <li><a href="#" class="catalogue">Catalogue</a></li>
+        <li><a href="#" class="panier">Panier</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Le Manteau Rouge</h1>
+    <h1 class="titre-principal">Le Manteau Rouge</h1>
     <p class="accroche">Chez nous, on adore quand le <span>SunShine</span></p>
     <section id="produits">
       <!-- Liste des produits -->
       <div class="produit">
-        <h2>Manteau d'hiver</h2>
+        <h2 class="produit-titre">Manteau d'hiver</h2>
         <img src="https://via.placeholder.com/150" alt="Manteau d'hiver">
-        <p>Un manteau chaud pour les froides journées d'hiver. </p>
-        <button id="ajouter-panier">Ajouter au panier</button>
+        <p class="produit-description">Un manteau chaud pour les froides journées d'hiver.</p>
+        <button class="ajouter-panier">Ajouter au panier</button>
       </div>
       <div class="produit">
-        <h2>Manteau de pluie</h2>
+        <h2 class="produit-titre">Manteau de pluie</h2>
         <img src="https://via.placeholder.com/150" alt="Manteau de pluie">
-        <p>Un manteau imperméable pour affronter la pluie avec style.</p>
-        <button id="ajouter-panier">Ajouter au panier</button>
+        <p class="produit-description">Un manteau imperméable pour affronter la pluie avec style.</p>
+        <button class="ajouter-panier">Ajouter au panier</button>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2024 Le Manteau Rouge - Tous droits réservés</p>
+    <p class="footer-text">&copy; 2024 Le Manteau Rouge - Tous droits réservés</p>
   </footer>
 
   <script src="scripts.js"></script>
 </body>
+
 </html>
