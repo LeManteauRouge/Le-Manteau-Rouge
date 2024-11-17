@@ -41,6 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
   changeLanguage();
 });
 
+// Vider le localStorage à chaque connexion
+localStorage.clear();  // Cela vide TOUT le localStorage
+
+// OU, si tu veux juste enlever un élément spécifique (comme la popup vue)
+localStorage.removeItem('popupSeen');
+
+
 
 //   // Afficher la popup à l'ouverture de la page
 //   window.addEventListener('load', function() {
