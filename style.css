@@ -203,10 +203,11 @@ body {
   padding-top: 15px; /* Ajout d'un peu d'espace autour de la vidéo */
 }
 
+/* Assurer que la vidéo s'adapte correctement dans son conteneur */
 .video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+  width: 100%;      /* L'iframe prend toute la largeur disponible */
+  max-width: 100%;  /* Empêcher l'iframe de dépasser la largeur du conteneur */
+  height: 200px;    /* Ajuster la hauteur de l'iframe */
 }
 
 @media screen and (max-width: 768px) {
