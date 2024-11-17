@@ -113,3 +113,39 @@ body {
   color: #c3ac90;  /* La même couleur que au survol, ou une autre couleur si tu préfères */
   outline: none; /* Retirer le contour du focus si nécessaire */
 }
+
+
+/* Par défaut, l'adresse email reste blanche */
+#email-link {
+  color: white;  /* Couleur de texte par défaut */
+  text-decoration: none;  /* Retirer le soulignement */
+}
+
+/* Quand on survole le lien, la couleur devient plus claire ou une autre couleur */
+#email-link:hover {
+  color: #c3ac90;  /* Choisis une couleur au survol */
+}
+
+/* Quand l'utilisateur clique sur le lien (focus), la couleur reste celle choisie */
+#email-link:focus {
+  color: #c3ac90;  /* La même couleur que au survol, ou une autre couleur si tu préfères */
+  outline: none; /* Retirer le contour du focus si nécessaire */
+}
+
+
+/* Par défaut, le numéro de téléphone est blanc */
+#phone-link {
+  color: white;  /* Couleur de texte par défaut */
+  text-decoration: none;  /* Retirer le soulignement */
+}
+
+/* Lorsque l'on survole le numéro de téléphone, il change de couleur */
+#phone-link:hover {
+  color: #c3ac90;  /* Choisis une couleur au survol */
+}
+
+/* Lorsque l'on clique sur le numéro de téléphone (focus), il garde la couleur choisie */
+#phone-link:focus {
+  color: #c3ac90;  /* La même couleur que au survol ou une autre couleur que tu préfères */
+  outline: none; /* Retirer le contour du focus si nécessaire */
+}
