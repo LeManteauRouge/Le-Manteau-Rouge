@@ -204,3 +204,9 @@ body {
   border: none;
 }
 
+@media screen and (max-width: 768px) {
+  img {
+      max-width: 100%; /* Adapte l'image pour les écrans plus petits */
+      height: auto;
+  }
+}
