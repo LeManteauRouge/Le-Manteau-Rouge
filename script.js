@@ -47,6 +47,18 @@ localStorage.clear();  // Cela vide TOUT le localStorage
 // OU, si tu veux juste enlever un élément spécifique (comme la popup vue)
 localStorage.removeItem('popupSeen');
 
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const videoContainer = document.querySelector(".video-container");
+
+  // Exemple : changer la taille en cliquant
+  videoContainer.addEventListener("click", () => {
+      videoContainer.style.width = "500px";
+      videoContainer.style.height = "300px";
+  });
+});
+
+
 
 
 //   // Afficher la popup à l'ouverture de la page

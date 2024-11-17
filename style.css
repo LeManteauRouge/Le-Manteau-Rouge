@@ -156,3 +156,51 @@ body {
   transition: opacity 0.5s ease-out;  /* Animation de fondu sur 0.5 seconde */
 }
 
+#on-adore {
+  background-color: #f9f9f9; /* Fond clair */
+  padding: 50px 0;
+}
+
+#on-adore h2 {
+  color: #e91e63;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+#on-adore .row {
+  display: flex;
+  justify-content: space-around;
+}
+
+#on-adore h4 {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+#on-adore p {
+  color: #555;
+}
+
+#on-adore a {
+  color: #e91e63;
+  text-decoration: none;
+}
+
+#on-adore a:hover {
+  text-decoration: underline;
+}
+
+/* styles.css */
+.video-container {
+  width: 300px; /* largeur personnalisée */
+  height: 200px; /* hauteur personnalisée */
+  overflow: hidden;
+  position: relative;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
