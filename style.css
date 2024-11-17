@@ -96,3 +96,20 @@ body {
     margin-top: 30px;
   }
   
+
+  /* Par défaut, l'adresse reste blanche */
+#address-link {
+  color: white;  /* Couleur de texte par défaut */
+  text-decoration: none;  /* Retirer le soulignement */
+}
+
+/* Quand on survole le lien, la couleur devient grise (ou une autre couleur de ton choix) */
+#address-link:hover {
+  color: #c3ac90;  /* Choisis une couleur au survol */
+}
+
+/* Quand l'utilisateur clique sur le lien (focus), la couleur reste celle choisie */
+#address-link:focus {
+  color: #c3ac90;  /* La même couleur que au survol, ou une autre couleur si tu préfères */
+  outline: none; /* Retirer le contour du focus si nécessaire */
+}
